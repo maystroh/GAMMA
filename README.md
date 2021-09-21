@@ -8,6 +8,7 @@ This solution is based on 3D and 2D deep learning classification methods.
 ##### Prerequisites:
 - `Pytorch`
 - `timm`
+- ...
 
 Please use `environment.yml` to have all the prerequisites
 
