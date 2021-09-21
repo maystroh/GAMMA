@@ -11,6 +11,9 @@ This solution is based on 3D and 2D deep learning classification methods.
 
 Please use `environment.yml` to have all the prerequisites
 
+##### Data preprocessing
+- python gamma-prepare-data.py --input_dirs=../GAMMA_data/validation_data --depth_oct=256 --height_oct=224  --width_oct=512 --height_fundus=900 --width_fundus=900 --gamma_task=classification --segment_retina_layers
+
 ##### Distributed training on 2 nodes, 4 GPUs each:
 - `singularity exec --nv /home/hassan/Containers/torch_latest.simg python trainer_multidist.py --nodes=2 --gpus=4 --nr=0 --data_root=../GAMMA_data/training_data/classification_F_900_900_OCT_512_224_256_Seg_True --model_3D=MedNet50 --input_struct_D=256 --input_struct_H=224 --input_struct_W=256 --task=classification --n_classes=1 --input_fundus_W=900 --input_fundus_H=900 --batch_size=1 --modalities_to_load OCT --group_classes --n_epochs=5 --dry_run`
 
