@@ -1,0 +1,4 @@
+watched_labels: ['non', 'early', 'mid_advanced']
+train_histogram: [40, 20, 19]
+validation_histogram: [5, 3, 2]
+test_histogram: [5, 3, 2]
